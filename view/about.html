@@ -1,0 +1,73 @@
+<div ng-controller="aboutController">
+</div>
+<div>
+    <h1>About You</h1>
+    <hr>
+    <form name="exampleForm" class="myForm" novalidate>
+    <div class="row">
+        <div class="col-md-8">
+    <label>First Name:</label>
+<input type="text" name="userFirstName" class="form-control" ng-model="firstName" required />
+<div ng-messages="exampleForm.userFirstName.$error">
+</div>
+            </div>
+</div>
+        <div class="row">
+        <div class="col-md-8">
+<label>Last Name:</label>
+<input type="text" name="userLastName" class="form-control" ng-model="lastName" required />
+<div ng-messages="exampleForm.userLastName.$error">
+    
+  <div ng-message="required" ng-show="exampleForm.userLastName.$touched">This field is required</div>
+    </div>
+            </div>
+</div>
+            
+
+        <div class="row">
+        <div class="col-md-8">
+        <label>Date of Birth:</label>
+<input type="text" name="dateOfBirth" class="form-control"  ng-model="dateOfBirth" required />
+<div ng-messages="exampleForm.dateOfBirth.$error">
+    
+        <div ng-message="required">This field is required</div>
+</div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-8">
+    <label>Street:</label>
+<input type="text" name="street" class="form-control"  ng-model="street" required />
+<div ng-messages="exampleForm.street.$error">
+    
+        <div ng-message="required">This field is required</div>
+        </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-8">
+        <label>Apt/Suite:</label>
+<input type="text" name="apt" class="form-control" ng-model="apt" required />
+<div ng-messages="exampleForm.apt.$error">
+    
+        <div ng-message="required">This field is required</div>
+        </div>
+            </div>
+        </div>=
+        <div class="row">
+        <div class="col-md-8">
+    <label>Phone Number:</label>
+<input type="number" name="userPhoneNumber" class="form-control" ng-model="phoneNumber" 
+       ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/"
+       required/>
+<div ng-messages="exampleForm.userPhoneNumber.$error">
+  <div ng-message="required">This field is required</div>
+  <div ng-message="pattern">Must be a valid 10 digit phone number</div>
+</div>
+            </div>
+        </div>
+    
+    <button type="submit" class="btn btn-primary" ng-click="continueVehicle()">Submit</button>
+      </form>
+    
+</div>

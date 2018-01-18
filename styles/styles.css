@@ -1,0 +1,15 @@
+.navbar-modified{
+   background-color: white;
+    border-radius: 0px;
+    height: 100px;
+    border-bottom: transparent;
+    
+}
+.navbar-modified-again{
+    background-color:rgb(182,211,233);
+    border-radius: 8px;
+    border: transparent;
+}
+.border-bottom{
+    border-bottom: 1px dotted lightgray;
+}
