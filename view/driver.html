@@ -1,3 +1,73 @@
 <div ng-controller="driverController">
 </div>
-<div>driver</div>
+<div class="container">
+    <h1>{{heading}}</h1>
+    <hr>
+    <div><h5>{{heading2}}</h5><h5>{{dob | date:'dd/MM/yyyy'}}</h5></div>
+ 
+    <form name="driverForm" class="driveForm" novalidate>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"><strong>Date of Birth</strong></div>
+        <div class="col-md-6">
+<input type="date" name="dateOfBirth1" class="form-control"  ng-model="dateOfBirth1" required />
+<div ng-messages="driverForm.dateOfBirth1.$error">
+    
+        <div ng-message="required">This field is required</div>
+</div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"><strong>Gender</strong></div>
+        <div class="col-md-6 " >
+                                <input type="radio" name="gender" value="male" ng-model="gender" checked> Male
+  <input type="radio" name="gender" value="female" ng-model="gender" required> Female
+            <div ng-messages="driverForm.gender.$error">
+    
+        <div ng-message="required">This field is required</div>
+</div>
+                            </div>
+            <div class="col-md-2"></div>
+            
+            </div>
+         <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"><strong>Marital Status</strong></div>
+        <div class="col-md-6 form-group dropdown" >
+                                <select name="maritalStatus" class="form-control" ng-model="maritalStatus" required>
+                                    <option> Select Please..</option>
+                                    <option  value="">Married</option>
+                                    <option> Unmarried</option>
+                                    
+                                </select>
+            <div ng-messages="driverForm.maritalStatus.$error">
+    
+        <div ng-message="required">This field is required</div>
+</div>
+                            </div>
+            <div class="col-md-2"></div>
+            
+            </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2"><strong>Employment Status</strong></div>
+        <div class="col-md-6 form-group dropdown" >
+                                <select name="employmentStatus" class="form-control" ng-model="employmentStatus"required>
+                                    <option> Select Please..</option>
+                                    <option  value="">Employed</option>
+                                    <option> Unemployed</option>
+                                    
+                                </select>
+            <div ng-messages="driverForm.employmentStatus.$error">
+    
+        <div ng-message="required">This field is required</div>
+</div>
+                            </div>
+            <div class="col-md-2"></div>
+            
+            </div>
+        
+    </form>
+</div>
